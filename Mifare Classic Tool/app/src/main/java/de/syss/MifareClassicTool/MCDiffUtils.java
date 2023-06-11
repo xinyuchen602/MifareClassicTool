@@ -18,6 +18,7 @@
 
 package de.syss.MifareClassicTool;
 
+import android.app.Activity;
 import android.util.SparseArray;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
  * Provides functions to compare two dumps.
  * @author Gerhard Klostermeier
  */
-public class MCDiffUtils {
+public class MCDiffUtils extends Activity {
 
     /**
      * Compare two dumps and get a list of all indices where

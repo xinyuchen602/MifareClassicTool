@@ -140,7 +140,7 @@ public class MainMenu extends Activity {
      * @param outState The state to put data into.
      */
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean("donate_dialog_was_shown", mDonateDialogWasShown);
         outState.putBoolean("info_external_nfc_dialog_was_shown", mInfoExternalNfcDialogWasShown);
@@ -583,7 +583,7 @@ public class MainMenu extends Activity {
      * Create the directories needed by MCT and clean out the tmp folder.
      */
     @SuppressLint("ApplySharedPref")
-    private void initFolders() {
+    public void initFolders() {
         // Create keys directory.
         File path = Common.getFile(Common.KEYS_DIR);
 
@@ -928,7 +928,7 @@ public class MainMenu extends Activity {
      * @see Common#HOME_DIR
      * @see Common#copyFile(InputStream, OutputStream)
      */
-    private void copyStdKeysFiles() {
+    public void copyStdKeysFiles() {
         File std = Common.getFile(
                 Common.KEYS_DIR + "/" + Common.STD_KEYS);
         File extended = Common.getFile(
