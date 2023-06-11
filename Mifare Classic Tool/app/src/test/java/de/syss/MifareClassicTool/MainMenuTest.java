@@ -1,9 +1,14 @@
+package de.syss.MifareClassicTool;
+
 import android.content.SharedPreferences;
 import android.widget.Button;
 import androidx.core.text.HtmlCompat;
+
+import com.google.common.truth.Truth.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
