@@ -25,13 +25,11 @@ android {
     tasks.withType(JavaCompile) {
         options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
     }
-    
+
 
 }
 
-test {
-    useJUnit()
-}
+
 dependencies {
     implementation "androidx.core:core:1.9.0"
     implementation "androidx.preference:preference:1.2.0"
