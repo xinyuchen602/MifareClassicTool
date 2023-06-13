@@ -1,0 +1,15 @@
+#!/bin/bash
+/home/alumno/Escritorio/pmd-bin-7.0.0-rc1/bin/pmd check -f text -R rulesets/java/quickstart.xml -d ./app/src/
+echo "analisis hechp, creamos apk"
+sleep 3
+./gradlew assemble
+echo "APK creado, analizamos el easy buggy"
+sleep 3
+/home/alumno/Escritorio/pmd-bin-7.0.0-rc1/bin/pmd check -f text -R rulesets/java/quickstart.xml -d /home/alumno/Escritorio/easybuggy-master/src/main/java/org/t246osslab/easybuggy/
+echo "analizado, ejecutamos easy buggy en puerto 8081"
+sleep 3
+/home/alumno/Escritorio/easybuggy-master/
+mvn clean install
+
+
+
